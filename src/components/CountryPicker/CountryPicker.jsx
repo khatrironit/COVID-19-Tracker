@@ -18,11 +18,12 @@ export default function CountryPicker({handleCountryChange}) {
     return (
         <div>
             <FormControl className = {Styles.formControl}>
-                <NativeSelect defaultValue = "" onChange = {(e)=>handleCountryChange(e.target.value)}>
+                <NativeSelect defaultValue = "" onChange = {(e)=>handleCountryChange(e.target.value)} style = {{fontSize:'1.5em',padding : '5px',display :'inline'}}>
                     <option value = ''>Global</option>
                     {countries.map((country,i) => <option key = {i} value = {country}>{country}</option>)}
-                </NativeSelect>
+                </NativeSelect>                
             </FormControl>
+            <p style = {{display:'inline',marginLeft : '30px'}}>Select a country...</p>
         </div>
     )
 }
